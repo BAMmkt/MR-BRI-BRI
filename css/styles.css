@@ -114,6 +114,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 .hero-foto img { width: 100%; aspect-ratio: 420 / 475; object-fit: cover; border-radius: var(--raio-grande); }
 .hero-fita { position: absolute; width: 60%; height: auto; left: -22%; bottom: -8%; z-index: -1; pointer-events: none; }
 .hero-selo { position: absolute; right: -8px; bottom: 28px; }
+.hero-foto .hero-carimbo { position: absolute; top: -28px; left: -28px; width: 136px; aspect-ratio: 1; border-radius: 50%; transform: rotate(-8deg); filter: drop-shadow(0 6px 14px rgba(86, 34, 38, 0.25)); }
 
 /* destaques */
 .destaques { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--espaco-4); }
@@ -240,6 +241,7 @@ ul { margin: 0; padding: 0; list-style: none; }
   .numeros { grid-template-columns: 1fr; gap: 0; }
   .formulario { padding: var(--espaco-5); border-radius: var(--raio-medio); }
   .hero-selo { right: 0; bottom: 16px; }
+  .hero-foto .hero-carimbo { width: 96px; top: -16px; left: -12px; }
   .cardapio-cabecalho img { width: 120px; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .btn { transition: none; } }
