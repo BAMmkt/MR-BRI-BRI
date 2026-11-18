@@ -2,7 +2,7 @@
 (function () {
   'use strict';
 
-  var WHATSAPP = '5511999207281'; // número no formato internacional, só dígitos
+  var WHATSAPP = '5511918259956'; // número no formato internacional, só dígitos
 
   // Menu no celular
   var botao = document.querySelector('.menu-botao');
