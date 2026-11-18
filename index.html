@@ -15,7 +15,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,700;1,400&family=Sacramento&display=swap">
-  <link rel="stylesheet" href="css/styles.css?v=3">
+  <link rel="stylesheet" href="css/styles.css?v=5">
 </head>
 <body>
   <a class="pular" href="#inicio">Ir para o conteúdo</a>
@@ -116,9 +116,9 @@
             <p class="texto">Contamos com uma estrutura dedicada à produção de sobremesas e <strong>atendemos São Paulo Capital</strong>. Para outras regiões, consulte a disponibilidade.</p>
             <p class="texto">Conheça nossos produtos e solicite uma proposta pelo <a href="https://wa.me/5511918259956?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Mr.%20Bribri%20e%20quero%20solicitar%20uma%20proposta." target="_blank" rel="noopener">WhatsApp</a>.</p>
             <div class="numeros">
-              <div class="numero"><strong>2015</strong><span>ano de fundação</span></div>
-              <div class="numero"><strong>+20</strong><span>anos de confeitaria</span></div>
-              <div class="numero"><strong>12</strong><span>receitas de pâte à choux</span></div>
+              <div class="numero"><strong data-contar="2015" data-inicio="2000">2015</strong><span>ano de fundação</span></div>
+              <div class="numero"><strong data-contar="20" data-prefixo="+">+20</strong><span>anos de confeitaria</span></div>
+              <div class="numero"><strong data-contar="12">12</strong><span>receitas de pâte à choux</span></div>
             </div>
           </div>
           <div class="sobre-foto">
@@ -128,30 +128,32 @@
 
         <div class="clientes">
           <div class="clientes-cabecalho">
-            <h3><strong>+100</strong> empresas atendidas</h3>
-            <p class="texto">Clientes corporativos, eventos, restaurantes e revendedores que servem Mr. Bribri desde 2015. Entre eles:</p>
+            <h3><strong data-contar="100" data-prefixo="+">+100</strong> empresas atendidas</h3>
+            <p>Clientes corporativos, eventos, restaurantes e revendedores que servem Mr. Bribri desde 2015. Entre eles:</p>
           </div>
-          <div class="clientes-grupo">
-            <span class="legenda">Empresas e eventos</span>
-            <ul class="clientes-lista">
-              <li class="tag tag-contorno tag-pilula">Hospital Santa Paula</li>
-              <li class="tag tag-contorno tag-pilula">Mattis</li>
-              <li class="tag tag-contorno tag-pilula">Grupo Sol Panamby</li>
-              <li class="tag tag-contorno tag-pilula">Villa Pé de Marmelo</li>
-            </ul>
-          </div>
-          <div class="clientes-grupo">
-            <span class="legenda">Restaurantes e empórios</span>
-            <ul class="clientes-lista">
-              <li class="tag tag-contorno tag-pilula">Restaurante Jangada Velho Chico</li>
-              <li class="tag tag-contorno tag-pilula">O Brasileirinho</li>
-              <li class="tag tag-contorno tag-pilula">Irmãos Gomes</li>
-              <li class="tag tag-contorno tag-pilula">Empório Santa Therezinha</li>
-              <li class="tag tag-contorno tag-pilula">Diva Doces</li>
-              <li class="tag tag-contorno tag-pilula">Empório do Churrasco</li>
-              <li class="tag tag-contorno tag-pilula">Hamburgueria Santa Guapira</li>
-              <li class="tag tag-contorno tag-pilula">Restaurante Sabor e Prosa</li>
-            </ul>
+          <div class="clientes-grupos">
+            <div class="clientes-grupo">
+              <span class="legenda">Empresas e eventos</span>
+              <ul class="clientes-lista">
+                <li>Hospital Santa Paula</li>
+                <li>Mattis</li>
+                <li>Grupo Sol Panamby</li>
+                <li>Villa Pé de Marmelo</li>
+              </ul>
+            </div>
+            <div class="clientes-grupo clientes-grupo-largo">
+              <span class="legenda">Restaurantes e empórios</span>
+              <ul class="clientes-lista">
+                <li>Restaurante Jangada Velho Chico</li>
+                <li>O Brasileirinho</li>
+                <li>Irmãos Gomes</li>
+                <li>Empório Santa Therezinha</li>
+                <li>Diva Doces</li>
+                <li>Empório do Churrasco</li>
+                <li>Hamburgueria Santa Guapira</li>
+                <li>Restaurante Sabor e Prosa</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -397,6 +399,6 @@
     </div>
   </footer>
 
-  <script src="js/main.js?v=4" defer></script>
+  <script src="js/main.js?v=5" defer></script>
 </body>
 </html>

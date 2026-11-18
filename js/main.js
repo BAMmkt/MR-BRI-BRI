@@ -62,6 +62,39 @@
     });
   }
 
+  // Números que sobem ao aparecer na tela
+  var contadores = Array.prototype.slice.call(document.querySelectorAll('[data-contar]'));
+  var semMovimento = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (contadores.length && 'IntersectionObserver' in window && !semMovimento) {
+    var escrever = function (el, valor) { el.textContent = (el.getAttribute('data-prefixo') || '') + valor; };
+    var contar = function (el) {
+      var fim = Number(el.getAttribute('data-contar'));
+      var inicio = Number(el.getAttribute('data-inicio')) || 0;
+      var duracao = 1600;
+      var comeco = null;
+      var quadro = function (agora) {
+        if (comeco === null) comeco = agora;
+        var progresso = Math.min((agora - comeco) / duracao, 1);
+        var suave = 1 - Math.pow(1 - progresso, 3);
+        escrever(el, Math.round(inicio + (fim - inicio) * suave));
+        if (progresso < 1) window.requestAnimationFrame(quadro);
+      };
+      window.requestAnimationFrame(quadro);
+    };
+    var obsContadores = new IntersectionObserver(function (entradas) {
+      entradas.forEach(function (e) {
+        if (e.isIntersecting) {
+          obsContadores.unobserve(e.target);
+          contar(e.target);
+        }
+      });
+    }, { threshold: 0.6 });
+    contadores.forEach(function (el) {
+      escrever(el, Number(el.getAttribute('data-inicio')) || 0);
+      obsContadores.observe(el);
+    });
+  }
+
   // Ano do rodapé
   var ano = document.getElementById('ano');
   if (ano) ano.textContent = String(new Date().getFullYear());

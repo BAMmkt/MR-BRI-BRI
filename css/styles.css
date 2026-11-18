@@ -139,14 +139,19 @@ ul { margin: 0; padding: 0; list-style: none; }
 .sobre-foto img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: var(--raio-grande); }
 .numeros { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--espaco-4); margin-top: var(--espaco-3); }
 .numero { padding: var(--espaco-4) 0; border-top: var(--linha-fina) solid var(--linha); }
-.numero strong { display: block; font-weight: 400; font-size: 34px; line-height: 1; color: var(--marca); margin-bottom: var(--espaco-1); }
+.numero strong { display: block; font-weight: 400; font-size: 34px; line-height: 1; color: var(--marca); margin-bottom: var(--espaco-1); font-variant-numeric: lining-nums tabular-nums; }
 .numero span { font-size: 14px; color: var(--texto-secundario); }
-.clientes { margin-top: var(--espaco-8); }
-.clientes-cabecalho { display: flex; flex-direction: column; gap: var(--espaco-2); margin-bottom: var(--espaco-5); }
-.clientes-cabecalho h3 { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 var(--espaco-3); font-size: 26px; }
-.clientes-cabecalho strong { font-weight: 400; font-size: clamp(56px, 7vw, 72px); line-height: 1; color: var(--marca); }
-.clientes-grupo { display: flex; flex-direction: column; gap: var(--espaco-3); margin-bottom: var(--espaco-5); }
-.clientes-lista { display: flex; flex-wrap: wrap; gap: var(--espaco-2); }
+.clientes { margin-top: var(--espaco-8); padding: var(--espaco-7); border-radius: var(--raio-grande); background: var(--marca); color: var(--sobre-marca); }
+.clientes-cabecalho { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--espaco-6); align-items: end; padding-bottom: var(--espaco-6); border-bottom: var(--linha-fina) solid rgba(255, 250, 238, 0.35); }
+.clientes-cabecalho h3 { display: flex; flex-direction: column; gap: var(--espaco-3); font-size: clamp(24px, 2.6vw, 30px); }
+.clientes-cabecalho strong { font-weight: 400; font-size: clamp(80px, 11vw, 128px); line-height: 0.9; letter-spacing: -0.02em; font-variant-numeric: lining-nums tabular-nums; }
+.clientes-cabecalho p { font-size: clamp(17px, 1.7vw, 20px); line-height: 1.4; opacity: .92; }
+.clientes-grupos { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: var(--espaco-6); margin-top: var(--espaco-6); }
+.clientes-grupo { display: flex; flex-direction: column; gap: var(--espaco-3); }
+.clientes .legenda { color: var(--sobre-marca); }
+.clientes-lista { display: grid; grid-template-columns: minmax(0, 1fr); column-gap: var(--espaco-6); }
+.clientes-grupo-largo .clientes-lista { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.clientes-lista li { padding: 10px 0; border-top: 1px solid rgba(255, 250, 238, 0.22); font-size: 17px; line-height: 1.3; }
 
 /* cardápio */
 .cardapio-bloco { margin-top: var(--espaco-7); }
@@ -230,6 +235,9 @@ ul { margin: 0; padding: 0; list-style: none; }
   .hero-foto { justify-self: start; width: min(100%, 440px); }
   .destaques, .regras, .eventos-passos, .numeros { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .pudins { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .clientes-cabecalho, .clientes-grupos { grid-template-columns: minmax(0, 1fr); }
+  .clientes-cabecalho { gap: var(--espaco-4); }
+  .clientes-lista { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .sobre-grid, .eclairs-grid, .eventos-grid, .contato-grid { grid-template-columns: 1fr; }
   .eclairs-fotos { position: static; grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .sobre-foto { order: -1; }
@@ -248,6 +256,8 @@ ul { margin: 0; padding: 0; list-style: none; }
   .menu-botao { display: inline-flex; }
   .destaques, .regras, .eventos-passos, .pudins, .eclairs-lista, .eclairs-condicoes, .eclairs-fotos, .formulario { grid-template-columns: 1fr; }
   .numeros { grid-template-columns: 1fr; gap: 0; }
+  .clientes { margin-top: var(--espaco-7); padding: var(--espaco-6) var(--espaco-5); border-radius: var(--raio-medio); }
+  .clientes-lista, .clientes-grupo-largo .clientes-lista { grid-template-columns: minmax(0, 1fr); }
   html { scroll-padding-top: 136px; }
   .topo .container { min-height: 68px; }
   .marca-topo img { height: 54px; }
